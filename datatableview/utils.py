@@ -257,7 +257,7 @@ class DatatableStructure(object):
             if column.fields and column.fields[0] in model_fields:
                 ordering_name = column.fields[0]
                 if not pretty_name:
-                    field = self.model._meta.get_field(column.fields[0])[0]
+                    field = self.model._meta.get_field(column.fields[0])
                     pretty_name = field.verbose_name
             else:
                 ordering_name = pretty_name
