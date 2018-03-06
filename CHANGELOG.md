@@ -2,6 +2,9 @@
 
 These logs are also available on GitHub: https://github.com/pivotal-energy-solutions/django-datatable-view/releases
 
+## 0.8.4
+Django 1.11.0 version of 0.8 series.
+
 ## 0.8.3
 #### Important future note
 This is the last planned release for the 0.8 series!  0.9 and 1.0 will arrive simultaneously sometime during the next couple of weeks, and the entire declaration process for datatableview options has been modernized.

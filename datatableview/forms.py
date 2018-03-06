@@ -3,7 +3,7 @@
 from django import forms
 from django.forms import ValidationError
 from django.forms.models import fields_for_model
-
+from utils import get_all_field_names
 
 class XEditableUpdateForm(forms.Form):
     """ Enforces a valid x-editable request. """
@@ -28,6 +28,6 @@ class XEditableUpdateForm(forms.Form):
     def clean_name(self):
         """ Validates that the field is represented on the model. """
         field_name = self.cleaned_data['name']
-        if field_name not in self.model._meta.get_all_field_names():
+        if field_name not in get_all_field_names(self.model):
             raise ValidationError("%r is not a valid field." % field_name)
         return field_name
